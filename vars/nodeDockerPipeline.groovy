@@ -1,12 +1,16 @@
 def call(Map config = [:]) {
 
+    def imageName = config.imageName ?: "node-app"
+    def containerName = config.containerName ?: "node-container"
+    def port = config.port ?: "3000"
+
     pipeline {
         agent any
 
         environment {
-            IMAGE_NAME = config.imageName ?: "node-app"
-            CONTAINER_NAME = config.containerName ?: "node-container"
-            PORT = config.port ?: "3006"
+            IMAGE_NAME = "${imageName}"
+            CONTAINER_NAME = "${containerName}"
+            PORT = "${port}"
         }
 
         stages {
