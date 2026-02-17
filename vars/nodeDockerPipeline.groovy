@@ -6,7 +6,7 @@ def call(Map config = [:]) {
         environment {
             IMAGE_NAME = config.imageName ?: "node-app"
             CONTAINER_NAME = config.containerName ?: "node-container"
-            PORT = config.port ?: "3000"
+            PORT = config.port ?: "3006"
         }
 
         stages {
