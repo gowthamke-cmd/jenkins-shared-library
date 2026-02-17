@@ -2,7 +2,7 @@ def call(Map config = [:]) {
 
     def imageName = config.imageName ?: "node-app"
     def containerName = config.containerName ?: "node-container"
-    def port = config.port ?: "3000"
+    def port = config.port ?: "3006"
 
     pipeline {
         agent any
